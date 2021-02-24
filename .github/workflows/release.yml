@@ -22,7 +22,7 @@ jobs:
           git config --global user.email "tiago@etc.digital"
           git config --global user.name "Tiago Souza"
       - run: yarn install --silent --frozen-lockfile
-      - run: yarn workspaces run build
+      - run: yarn build
 
       - name: Release
         uses: cycjimmy/semantic-release-action@v2
