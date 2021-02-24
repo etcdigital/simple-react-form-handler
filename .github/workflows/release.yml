@@ -12,6 +12,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: |
+          npm set progress=false
+          npm set package-lock=false
+          npm set registry https://registry.npmjs.org/ && echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN_PUBLISH }}" > .npmrc
+          git config --global user.email "tiago@etc.digital"
+          git config --global user.name "Tiago Souza"
+      - run: yarn install --silent --frozen-lockfile
+      - run: yarn workspaces run build
+
       - name: Release
         uses: cycjimmy/semantic-release-action@v2
         with:
