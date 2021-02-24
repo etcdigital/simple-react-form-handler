@@ -1,0 +1,41 @@
+{
+	"name": "simple-react-form-handler",
+	"version": "0.1.0",
+	"description": "A simple react form handler",
+	"author": "Tiago Souza <tiago@etc.digital>",
+	"license": "MIT",
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/etcdigital/simple-react-form-handler"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/index.module.js",
+			"require": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"main": "dist/index.js",
+	"module": "dist/index.module.js",
+	"source": "src/index.tsx",
+	"types": "./dist/@types/index.d.ts",
+	"files": [
+		"dist",
+		"types"
+	],
+	"devDependencies": {
+		"@semantic-release/npm": "7.0.10",
+		"@types/react": "^17.0.2",
+		"ptah": "^1.10.1",
+		"typescript": "^4.2.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"dot-object": "^2.1.4",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1"
+	}
+}
