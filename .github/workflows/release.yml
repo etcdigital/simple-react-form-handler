@@ -22,6 +22,7 @@ jobs:
             @semantic-release/github
             @semantic-release/git
             @semantic-release/npm
+          branch: "main"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN_PUBLISH}}
