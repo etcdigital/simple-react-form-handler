@@ -12,7 +12,8 @@
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"allowSyntheticDefaultImports": true,
-		"declaration": false,
+		"declaration": true,
+		"declarationDir": "./dist/@types",
 		"jsx": "react"
 	},
 	"include": ["./src/"]
