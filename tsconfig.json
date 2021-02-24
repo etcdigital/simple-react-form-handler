@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"sourceMap": false,
+		"noImplicitAny": false,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"lib": ["ES2020"],
+		"module": "ESNext",
+		"target": "ES2020",
+		"outDir": "./dist",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"declaration": false,
+		"jsx": "react"
+	},
+	"include": ["./src/"]
+}
