@@ -9,7 +9,7 @@ const getAttrs = (element: any): { name: string; value: string | boolean } => {
 		return { name: "", value: "" };
 	}
 	if (type === "checkbox") {
-		value = value === "on";
+		value = element.getAttribute("checked") || false;
 	}
 	return { name, value };
 };
